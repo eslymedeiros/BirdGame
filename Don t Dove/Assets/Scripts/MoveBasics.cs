@@ -12,7 +12,7 @@ public class MoveBasics : MonoBehaviour
     public float Forca;
     public bool Jumping = false;
     public bool chao;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,39 +31,43 @@ public class MoveBasics : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Move();
+        Jump();
+    }
+
+    void Move()
+    {
         if (Jumping == false)
         {
-            if (Input.GetKey(KeyCode.D) && Jumping == false)
+            Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+            transform.position += movement * speed;
+
+            float input = Input.GetAxis("Horizontal");
+
+            if (input > 0)
             {
-                rig.velocity = Vector2.right * speed;
                 transform.eulerAngles = new Vector2(0f, 0f);
-
             }
-
-            else if (Input.GetKey(KeyCode.A) && Jumping == false)
+            if (input < 0)
             {
-                rig.velocity = Vector2.left * speed;
-                transform.eulerAngles = new Vector2(0f, 180f);
-
+                transform.eulerAngles = new Vector2(180f, 0f);
             }
-            else
-            {
-                rig.velocity = Vector2.zero;
-            }
+            
         }
+    }
 
-        if (Input.GetKey(KeyCode.Space) && chao && Jumping == false)
+    void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && chao && !Jumping)
         {
-            rig.AddForce(Vector2.up * Forca, ForceMode2D.Impulse);
+            rig.AddForce(new Vector2(0f, Forca), ForceMode2D.Impulse);
             chao = false;
             Jumping = true;
-            
+
         }
         else
         {
             Jumping = false;
         }
-        
-        
     }
-}
+}    
