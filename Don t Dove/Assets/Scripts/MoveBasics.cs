@@ -28,8 +28,9 @@ public class MoveBasics : MonoBehaviour
         }
     }
 
+    
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Move();
         Jump();
