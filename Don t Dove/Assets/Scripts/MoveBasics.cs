@@ -51,7 +51,7 @@ public class MoveBasics : MonoBehaviour
             }
             if (input < 0)
             {
-                transform.eulerAngles = new Vector2(180f, 0f);
+                transform.eulerAngles = new Vector2(0f, 180f);
             }
             
         }
