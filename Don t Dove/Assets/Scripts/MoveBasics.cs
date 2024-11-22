@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class MoveBasics : MonoBehaviour
 {
-
+    private Animator anim;
     private Rigidbody2D rig;
     public float speed;
     public float Forca;
@@ -17,6 +17,7 @@ public class MoveBasics : MonoBehaviour
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -47,10 +48,12 @@ public class MoveBasics : MonoBehaviour
 
             if (input > 0)
             {
+                anim.SetBool("Walk",true);
                 transform.eulerAngles = new Vector2(0f, 0f);
             }
             if (input < 0)
             {
+                anim.SetBool("Walk",true);
                 transform.eulerAngles = new Vector2(0f, 180f);
             }
             
@@ -62,6 +65,7 @@ public class MoveBasics : MonoBehaviour
         if (Input.GetButtonDown("Jump") && chao && !Jumping)
         {
             rig.AddForce(new Vector2(0f, Forca), ForceMode2D.Impulse);
+            anim.SetBool("Jump",true);
             chao = false;
             Jumping = true;
 
