@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9262dc2191d34da4ebbd42ea57b35029
+guid: 67d1ed7f44fd3b44b91e32289005b13b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 1, z: 0, w: 0}
+    pivot: {x: 0.5092593, y: -5.8}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 90
-      width: 100
-      height: 80
-    spriteID: 6dcfe333d7b1e9a4b83ed38a2b0c1535
+      y: 35
+      width: 108
+      height: 10
+    spriteID: c8c61bd24f38afc49a26f6b51bf4b5d8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +140,39 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 90}
+    uvTransform: {x: 4, y: 35}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.5185185, y: -0.34615386}
+    pivot: {x: 0.5092593, y: -5.8}
     alignment: 9
-    border: {x: 0, y: 4, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 53
+      width: 108
+      height: 10
+    spriteID: e9ffa783b0bdf364982596fbf162bd44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 53}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 0.5092593, y: -2.5217392}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
       width: 108
-      height: 78
-    spriteID: a4874cc623e4bd242a27b863be1ed8eb
+      height: 23
+    spriteID: 3870954648fd1ea4e85b0bb973000367
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -164,8 +184,8 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -758059863
-    name: pomba-walk
+    guid: 557211420
+    name: galho 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
@@ -174,20 +194,29 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 28
-        width: 100
-        height: 80
-      spriteId: 6dcfe333d7b1e9a4b83ed38a2b0c1535
+        x: 9
+        y: 58
+        width: 108
+        height: 10
+      spriteId: c8c61bd24f38afc49a26f6b51bf4b5d8
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 27
+        x: 9
+        y: 58
         width: 108
-        height: 78
-      spriteId: a4874cc623e4bd242a27b863be1ed8eb
+        height: 10
+      spriteId: e9ffa783b0bdf364982596fbf162bd44
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 9
+        y: 58
+        width: 108
+        height: 23
+      spriteId: 3870954648fd1ea4e85b0bb973000367
     linkedCells: []
     parentIndex: -1
   platformSettings:

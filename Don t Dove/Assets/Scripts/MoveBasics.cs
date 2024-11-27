@@ -8,8 +8,10 @@ public class MoveBasics : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rig;
+    
     public float speed;
     public float Forca;
+    
     public bool Jumping = false;
     public bool chao;
 
@@ -26,6 +28,10 @@ public class MoveBasics : MonoBehaviour
         if (player.gameObject.tag == "Chao")
         {
             chao = true;
+        }
+        if (player.gameObject.tag == "ninho")
+        {
+            Texts.instance.SeeFinal();
         }
     }
 
