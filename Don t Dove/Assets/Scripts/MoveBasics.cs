@@ -72,12 +72,13 @@ public class MoveBasics : MonoBehaviour
         {
             rig.AddForce(new Vector2(0f, Forca), ForceMode2D.Impulse);
             anim.SetBool("Jump",true);
-            chao = false;
             Jumping = true;
+            chao = false;
 
         }
         else
         {
+            anim.SetBool("Jump",false);
             Jumping = false;
         }
     }
