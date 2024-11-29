@@ -7,6 +7,7 @@ using UnityEngine;
 public class MoveBasics : MonoBehaviour
 {
     private Animator anim;
+    private AudioSource audio;
     private Rigidbody2D rig;
     
     public float speed;
@@ -20,6 +21,7 @@ public class MoveBasics : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
 
@@ -28,6 +30,7 @@ public class MoveBasics : MonoBehaviour
         if (player.gameObject.tag == "Chao")
         {
             chao = true;
+            anim.SetBool("Jump",false);
         }
         if (player.gameObject.tag == "ninho")
         {
@@ -62,7 +65,10 @@ public class MoveBasics : MonoBehaviour
                 anim.SetBool("Walk",true);
                 transform.eulerAngles = new Vector2(0f, 180f);
             }
-            
+            if(input == 0)
+            {
+                Debug.Log("Leu de otario");
+            }
         }
     }
 
@@ -78,7 +84,6 @@ public class MoveBasics : MonoBehaviour
         }
         else
         {
-            anim.SetBool("Jump",false);
             Jumping = false;
         }
     }

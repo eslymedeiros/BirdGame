@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: colmeia
     originalName: 
-    pivot: {x: 1.25, y: -2.09375}
+    pivot: {x: 0.50910735, y: 0.6092896}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
