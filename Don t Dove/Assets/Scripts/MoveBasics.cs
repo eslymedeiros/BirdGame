@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class MoveBasics : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
     private AudioSource audio;
     private Rigidbody2D rig;
     
