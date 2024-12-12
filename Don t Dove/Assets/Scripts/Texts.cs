@@ -10,6 +10,8 @@ public class Texts : MonoBehaviour
     public GameObject TelaIni;
     public GameObject Context;
     public GameObject Final;
+    
+    public AudioSource AVictory;
 
     public static Texts instance;
 
@@ -33,6 +35,7 @@ public class Texts : MonoBehaviour
     public void SeeFinal()
     {
         Final.SetActive(true);
+        AVictory.Play();
     }
 
     public void Restart(string restart)

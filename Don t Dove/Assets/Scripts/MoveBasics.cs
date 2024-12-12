@@ -7,7 +7,7 @@ using UnityEngine;
 public class MoveBasics : MonoBehaviour
 {
     public Animator anim;
-    private AudioSource audio;
+    public AudioSource AudioPomba;
     private Rigidbody2D rig;
     
     public float speed;
@@ -21,7 +21,6 @@ public class MoveBasics : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
     }
 
 
@@ -78,6 +77,7 @@ public class MoveBasics : MonoBehaviour
         {
             rig.AddForce(new Vector2(0f, Forca), ForceMode2D.Impulse);
             anim.SetBool("Jump",true);
+            AudioPomba.Play();
             Jumping = true;
             chao = false;
 
