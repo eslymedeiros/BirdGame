@@ -66,7 +66,7 @@ public class MoveBasics : MonoBehaviour
             }
             if(input == 0)
             {
-                Debug.Log("Leu de otario");
+                anim.SetBool("Walk",false);
             }
         }
     }
